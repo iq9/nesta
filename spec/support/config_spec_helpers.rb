@@ -1,6 +1,6 @@
 module ConfigSpecHelper
 
-  FIXTURE_DIR = File.join(File.dirname(__FILE__), "fixtures")
+  FIXTURE_DIR = File.join(File.dirname(__FILE__) + '/../fixtures')
 
   def initialise_config
     @config = {}
@@ -11,13 +11,13 @@ module ConfigSpecHelper
     initialise_config if @config.nil?
     @config[key] = value
   end
-  
+
   def stub_env_config_key(key, value)
     initialise_config if @config.nil?
     @config["test"] ||= {}
     @config["test"][key] = value
   end
-  
+
   def stub_configuration
     stub_config_key("title", "My blog")
     stub_config_key("subtitle", "about stuff")

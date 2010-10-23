@@ -4,11 +4,11 @@ module Nesta
       require File.join(Nesta::Path.local, "app")
     rescue LoadError
     end
-    
+
     def self.local_view_path
       File.join(Nesta::Path.local, "views")
     end
-    
+
     def self.load_theme_app
       if Nesta::Config.theme
         require File.join(Nesta::Path.themes, Nesta::Config.theme, "app")

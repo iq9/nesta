@@ -17,6 +17,9 @@
       #header
         %p.title= @heading
         %p.subtitle= @subtitle
+        - if @banner_img
+          #banner
+            %img{ :src => @banner_img, :width => "816", :height => "186", :alt => @banner_title, :title => @banner_title }
       = yield
       #footer
         %p
