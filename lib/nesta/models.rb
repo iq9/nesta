@@ -168,11 +168,11 @@ class Page < FileModel
   end
 
   def banner_title
-    metadata('banner title') || 'Russell H. Brooks'
+    metadata('banner title') || 'Default Banner Title'
   end
 
   def comments
-    metadata('comments') == 'true'
+    metadata('comments').nil? || metadata('comments') == 'true'
   end
 
   def atom_id
