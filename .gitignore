@@ -1,9 +1,11 @@
 ._*
 .bundle
-.DS_Store
 .rvmrc
+.DS_Store
 .*.swp
 config/config.yml
 config/deploy.rb
+Gemfile.lock
 db/*.db
 public/cache
+
