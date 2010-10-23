@@ -73,4 +73,4 @@ I fixed hyphenated ones like "shell-unix-generic", but PHP still doesn't work.
 
 **IMPORTANT:**
 
-* Use HTML Named-Entities [&gt; and &lt;] in place of greater-than [>] and less-than [<] symbols in your code, or you'll confuse Maruku, Haml, and/or UV.
+* Use HTML Named-Entities [&amp;gt; and &amp;lt;] in place of greater-than [>] and less-than [<] symbols in your code, or you'll confuse Maruku, Haml, and/or UV.
