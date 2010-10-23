@@ -65,7 +65,7 @@ Mark up code like this:
       # Source code
     </pre>
 
-To see supported lanaguage-name's, type this at a Shell prompt after installing UV:
+To see supported language name's, type this at a Shell prompt after installing UV:
 
     uv -l syntax
 
