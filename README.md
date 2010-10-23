@@ -10,6 +10,19 @@ files (though you can also use Haml if you need to add some HTML to your
 pages). There's no database; write your content in your editor. Publish by
 pushing to a git repository.
 
+## This Fork Supports
+
+* Ruby 1.9.2 [MRI]
+* Heroku
+* Sinatra Cache, which uses Rack Cache.
+* Syntax highlighting with Ultraviolet. Hyphenated languages fixed, such as 'shell-unix-generic'.
+* App as a Sinatra subclass [the "new way" of doing it].
+* Different banner image per page. An example of how to add your own custom metadata to the Markdown header.
+* Newer HAML gem.
+* Newer RedCloth gem.
+
+Many double quotes converted to single app-wide.  Slightly faster and more standard.
+
 ## Installation
 
 Begin by cloning the git repository:
