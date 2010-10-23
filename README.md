@@ -13,15 +13,14 @@ pushing to a git repository.
 ## This Fork Supports
 
 * Ruby 1.9.2 [MRI]
-* Heroku
-* Sinatra Cache, which uses Rack Cache.
-* Syntax highlighting with Ultraviolet. Hyphenated languages fixed, such as 'shell-unix-generic'.
-* App as a Sinatra subclass [the "new way" of doing it].
-* Different banner image per page. An example of how to add your own custom metadata to the Markdown header.
+* [Heroku](http://heroku.com/) hosting
+* Sinatra Cache, which uses Rack Cache.  Nesta's previous custom caching removed / disabled.  Cached pages will no longer appear in your /public dir.
+* Syntax highlighting with Ultraviolet.  Hyphenated languages fixed, such as 'shell-unix-generic'.
+* App is a Sinatra subclass [the "new way" of doing it].
+* Different banner image per page.  An example of how to add your own custom metadata to the Markdown header.
 * Newer HAML gem.
 * Newer RedCloth gem.
-
-Many double quotes converted to single app-wide.  Slightly faster and more standard.
+* Many double quotes converted to single app-wide.  Minutely faster and more standard.
 
 ## Installation
 
@@ -55,3 +54,23 @@ files in `nesta/content`, and you're on your way.
 
 See [http://effectif.com/nesta](http://effectif.com/nesta) for more
 documentation.
+
+## Ultraviolet Notes ##
+
+Ultraviolet support only tested with Markdown, not Textile.
+
+Mark up code like this:
+
+    <pre>:::language-name
+      # Source code
+    </pre>
+
+To see supported lanaguage-name's, type this at a Shell prompt after installing UV:
+
+    uv -l syntax
+
+I fixed hyphenated ones like "shell-unix-generic", but PHP still doesn't work.
+
+**IMPORTANT:**
+
+* Use HTML Named-Entities [&gt; and &lt;] in place of greater-than [>] and less-than [<] symbols in your code, or you'll confuse Maruku, Haml, and/or UV.
