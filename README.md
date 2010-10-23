@@ -18,6 +18,7 @@ pushing to a git repository.
 * Syntax highlighting with Ultraviolet.  Hyphenated languages fixed, such as 'shell-unix-generic'.
 * App is a Sinatra subclass [the "new way" of doing it].
 * Different banner image per page.  An example of how to add your own custom metadata to the Markdown header.
+* Enable / disable Comments on per-page basis.  Put 'comments: false' in page header.
 * Newer HAML gem.
 * Newer RedCloth gem.
 * Many double quotes converted to single app-wide.  Minutely faster and more standard.
@@ -74,3 +75,7 @@ I fixed hyphenated ones like "shell-unix-generic", but PHP still doesn't work.
 **IMPORTANT:**
 
 * Use HTML Named-Entities [&amp;gt; and &amp;lt;] in place of greater-than [>] and less-than [<] symbols in your code, or you'll confuse Maruku, Haml, and/or UV.
+
+## Gotchas ##
+
+* **Categories** - Your category names in mexu.txt, and your category file names, must be entirely lower case and must match in spelling.  Your Heading1 element in the category's markdown file can be proper-cased, which is what Nesta uses to build your Categories sidebar.  If case doesn't match between menu.txt and filenames, those Categories will be missing from your sidebar.

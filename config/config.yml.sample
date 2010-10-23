@@ -39,11 +39,16 @@ subtitle: "(change this text in config/config.yml)"
 #     Useful if you're deploying Nesta with a proxy server such as Nginx,
 #     but not in the least bit helpful if your pages are dynamic, or you're
 #     deploying Nesta to Heroku.
-#
-cache: false # Leave 'false'. We're using Sinatra Cache now, which uses Rack Cache.
-sinatra_cache: true # Not actually implemented yet. Sinatra Cache is active all the time.
+cache: false # Leave False.
+
+# sinatra_cache
+#     Activate Sinatra Cache, which uses Rack Cache.  We set this to True
+#     in Production mode further down.  You don't want your pages caching
+#     in Dev mode, so it's False here.
+sinatra_cache: false
 
 # max_age
+#     Used only when Sinatra Cache is active.
 #     These settings determine the max-age value for the Cache-Control
 #     header sent back with the response. Please see RFC 2616, particularly
 #     section 13: http://www.ietf.org/rfc/rfc2616.txt for details of the
@@ -83,7 +88,8 @@ content: content
 #
 # Don't forget to uncomment the "production:" line too...
 
-# production:
-   cache: false # Leave 'false' so none of the old manual caching is active.
-   content: content # Simply 'content' is all that works on Heroku.
-#   google_analytics_code: "UA-???????-?"
+production:
+   sinatra_cache: true
+   # Only a relative path [in this case, 'content'] works on Heroku.
+   content: content
+#   google_analytics_code: UA-???????-?
